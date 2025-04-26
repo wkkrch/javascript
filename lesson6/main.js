@@ -271,3 +271,29 @@ let groupedCards = cards.reduce((acc, card) => {
     clubs: []
 });
 console.log(groupedCards);
+
+function filtered (arr, callback){
+    let emptyArray = [];
+    for (const item of arr) {
+        if (callback(item)){
+            emptyArray.push(item);
+        }
+    }
+    return emptyArray;
+}
+
+console.log(filtered([11, 22, 33, 44, 55, 66], (item) => item % 2 === 0));
+const users = [
+    { name: 'Vika', age: 22, status: true },
+    { name: 'Ira', age: 19, status: false },
+    { name: 'Oleh', age: 30, status: true },
+    { name: 'Sasha', age: 26, status: false },
+    { name: 'Nastya', age: 24, status: true },
+    { name: 'Andrii', age: 35, status: false },
+    { name: 'Olena', age: 28, status: true },
+    { name: 'Maksym', age: 18, status: false },
+    { name: 'Katya', age: 20, status: true },
+    { name: 'Dima', age: 40, status: false }
+];
+console.log(filtered(users, (item) => item.age < 30));
+

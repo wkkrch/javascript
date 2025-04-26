@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+}
+.wrapper{
+    background-color: lightpink;
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.wrap{
+    width: 300px;
+    height: 330px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+.monthAndHour{
+    display: flex;
+    margin: 10px;
+}
+.month{
+    width: 50%;
+    background-color: lightpink;
+}

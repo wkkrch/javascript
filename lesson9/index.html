@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            color: white;
+            background-color: red;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--<script src="main.js"></script>-->
+<script>
+    let block = document.createElement('div');
+    block.classList.add('wrap');
+    block.classList.add('collapse');
+    block.classList.add('alpha');
+    block.classList.add('beta');
+    block.innerText = 'lorem ipsum';
+    let cloneBlock = block.cloneNode(true);
+    document.body.append(block, cloneBlock);
+
+</script>
+</body>
+</html>
