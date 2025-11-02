@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dates = JSON.parse(localStorage.getItem('visits')) || [];
+    const blockForDate = document.createElement('div');
+    const list = document.createElement('ul');
+    for (const date of dates) {
+        const li = document.createElement('li');
+        li.innerText = date;
+        list.appendChild(li);
+    }
+    blockForDate.appendChild(list);
+    document.body.appendChild(blockForDate);
+
+
+
+</script>
+</body>
+</html>
